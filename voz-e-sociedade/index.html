@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voz e Sociedade — Informação, sociedade e direitos</title>
+<meta name="description" content="Jornal digital dedicado à cobertura de feminicídio, racismo, misoginia, direitos humanos e desigualdade social. Projeto de demonstração.">
+<link rel="canonical" href="./index.html">
+<meta property="og:title" content="Voz e Sociedade">
+<meta property="og:description" content="Informação, sociedade e direitos.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+<script>(function(){try{var t=JSON.parse(localStorage.getItem('vozesociedade:theme'));if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<div id="breaking-bar" class="breaking-bar"></div>
+<header id="site-header" class="site-header"></header>
+<div class="newsroom-ticker" id="home-ticker"></div>
+
+<main id="main">
+
+  <section class="hero-block" id="home-hero" aria-label="Destaque principal"></section>
+
+  <section class="latest-block container" aria-label="Mais lidas e últimas notícias">
+    <div class="mais-lidas-latest-grid">
+      <div>
+        <div class="section-title" style="--cat-color:var(--signal)"><span>Mais lidas</span></div>
+        <div class="ranked-list" id="home-mais-lidas"></div>
+      </div>
+      <div>
+        <div class="section-title" style="--cat-color:var(--signal)">
+          <span>Últimas notícias</span>
+          <a class="ver-tudo link-underline" href="pages/categoria/index.html?cat=ultimas">Ver tudo</a>
+        </div>
+        <div class="latest-list" id="home-latest"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topic-block container" id="topic-feminicidio" aria-label="Feminicídio"></section>
+  <section class="topic-block container" id="topic-racismo" aria-label="Racismo"></section>
+  <section class="topic-block container" id="topic-misoginia" aria-label="Misoginia"></section>
+  <section class="topic-block container" id="topic-sociedade" aria-label="Sociedade"></section>
+  <section class="topic-block container" id="topic-politica" aria-label="Política"></section>
+
+  <section class="investig-block" aria-label="Investigações">
+    <div class="container">
+      <div class="section-title"><span>Investigações</span></div>
+      <div class="investig-grid" id="home-investigacoes"></div>
+    </div>
+  </section>
+
+  <section class="card-block container" aria-label="Análises">
+    <div class="section-title" style="--cat-color:var(--cat-analise)">
+      <span>Análises</span>
+      <a class="ver-tudo link-underline" href="pages/analises/index.html">Ver tudo</a>
+    </div>
+    <div class="hcard-list" id="home-analises"></div>
+  </section>
+
+  <section class="opinion-block container" aria-label="Opinião">
+    <div class="section-title" style="--cat-color:var(--cat-opiniao)">
+      <span>Opinião</span>
+      <a class="ver-tudo link-underline" href="pages/opiniao/index.html">Ver tudo</a>
+    </div>
+    <div class="opinion-grid" id="home-opiniao"></div>
+  </section>
+
+  <section class="card-block container" aria-label="Entrevistas">
+    <div class="section-title" style="--cat-color:var(--cat-entrevista)">
+      <span>Entrevistas</span>
+      <a class="ver-tudo link-underline" href="pages/entrevista/index.html">Ver tudo</a>
+    </div>
+    <div class="card-grid cols-3" id="home-entrevistas"></div>
+  </section>
+
+  <section class="focus-block container" aria-label="Em foco">
+    <div class="section-title"><span>Em foco</span></div>
+    <div class="focus-tags" id="home-focus"></div>
+  </section>
+
+  <section class="card-block container" aria-label="Cartuns e charges">
+    <div class="section-title" style="--cat-color:var(--cat-cartum)">
+      <span>Cartuns &amp; charges</span>
+      <a class="ver-tudo link-underline" href="pages/cartuns/index.html">Ver tudo</a>
+    </div>
+    <div class="cartum-grid" id="home-cartuns" style="padding-block:0;"></div>
+  </section>
+
+  <section class="data-block" aria-label="Dados">
+    <div class="container">
+      <div class="section-title" style="--cat-color:var(--cat-dados)">
+        <span>Dados</span>
+        <a class="ver-tudo link-underline" href="pages/categoria/index.html?cat=dados">Ver tudo</a>
+      </div>
+      <div class="data-grid" id="home-dados"></div>
+    </div>
+  </section>
+
+  <section class="games-block container" aria-label="Jogos">
+    <div class="section-title"><span>Jogos</span><a class="ver-tudo link-underline" href="pages/jogos/index.html">Ver tudo</a></div>
+    <div class="games-grid">
+      <div class="game-card">
+        <div class="icon" aria-hidden="true">🔎</div>
+        <h3>Caça-palavras</h3>
+        <p>Encontre termos relacionados à cobertura do jornal.</p>
+        <a class="btn btn-outline" href="pages/jogos/cacapalavras.html">Jogar</a>
+      </div>
+      <div class="game-card">
+        <div class="icon" aria-hidden="true">🔢</div>
+        <h3>Sudoku</h3>
+        <p>Três níveis de dificuldade, direto no navegador.</p>
+        <a class="btn btn-outline" href="pages/jogos/sudoku.html">Jogar</a>
+      </div>
+      <div class="game-card">
+        <div class="icon" aria-hidden="true">❓</div>
+        <h3>Quiz</h3>
+        <p>Teste seus conhecimentos sobre direitos e sociedade.</p>
+        <a class="btn btn-outline" href="pages/jogos/quiz.html">Jogar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-block" id="newsletter" aria-label="Newsletter">
+    <div class="container">
+      <h2>Receba as principais notícias da semana</h2>
+      <p>Um resumo semanal com as coberturas mais importantes do Voz e Sociedade, direto no seu e-mail.</p>
+      <form id="newsletter-form" class="newsletter-form">
+        <input type="text" placeholder="Seu nome" aria-label="Nome" required>
+        <input type="email" placeholder="Seu e-mail" aria-label="E-mail" required>
+        <button class="btn btn-primary" type="submit">Assinar</button>
+      </form>
+      <p class="newsletter-note">Modo de demonstração — este formulário não envia dados a nenhum servidor.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/illustration.js"></script>
+<script src="js/data/categories.js"></script>
+<script src="js/data/authors.js"></script>
+<script src="js/data/tags.js"></script>
+<script src="js/data/articles.js"></script>
+<script src="js/data/explicativos.js"></script>
+<script src="js/data/cartuns.js"></script>
+<script src="js/data/dados.js"></script>
+<script src="js/data/queries.js"></script>
+<script src="js/components/chrome.js"></script>
+<script src="js/components/card.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/home.js"></script>
+</body>
+</html>

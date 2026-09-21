@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudoku — Voz e Sociedade</title>
+<meta name="description" content="Jogo de sudoku com três níveis de dificuldade.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+<script>(function(){try{var t=JSON.parse(localStorage.getItem('vozesociedade:theme'));if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="../../css/variables.css">
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<style>
+  #sudoku-grid { display: grid; grid-template-columns: repeat(9, 1fr); width: 100%; max-width: 480px; border: 2px solid var(--ink); }
+  .sudoku-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--rule); font-size: 1.1rem; font-family: var(--font-ui); }
+  .sudoku-cell input { width: 100%; height: 100%; text-align: center; border: none; background: transparent; font-size: 1.1rem; color: var(--ink); }
+  .sudoku-cell.given { background: var(--paper-soft); font-weight: 700; }
+  .sudoku-cell.err input { color: var(--signal); }
+  .sudoku-cell:nth-child(3n) { border-right: 2px solid var(--ink); }
+  #sudoku-grid .sudoku-cell:nth-child(9n+1) { border-left: 2px solid var(--ink); }
+  .sudoku-row-thick { border-bottom: 2px solid var(--ink); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<div id="breaking-bar" class="breaking-bar"></div>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+  <div class="container"><nav class="breadcrumbs" aria-label="Caminho de navegação"><a href="../../index.html">Início</a><span class="sep">/</span><a href="index.html">Jogos</a><span class="sep">/</span><span>Sudoku</span></nav></div>
+  <div class="container page-header"><h1>Sudoku</h1></div>
+  <div class="container game-layout">
+    <div class="game-board">
+      <div id="sudoku-grid"></div>
+    </div>
+    <div class="game-sidebar">
+      <label class="meta" for="sudoku-difficulty" style="display:block;margin-bottom:0.5rem;">Dificuldade</label>
+      <select id="sudoku-difficulty" style="border:1px solid var(--rule-strong);padding:0.5rem;margin-bottom:1rem;">
+        <option value="facil">Fácil</option>
+        <option value="medio" selected>Médio</option>
+        <option value="dificil">Difícil</option>
+      </select>
+      <br>
+      <button class="btn btn-primary" id="sudoku-check">Verificar respostas</button>
+      <button class="btn btn-outline" id="sudoku-new" style="margin-top:0.75rem;">Novo jogo</button>
+      <p class="meta" id="sudoku-status" style="margin-top:1rem;"></p>
+    </div>
+  </div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="../../js/utils/helpers.js"></script>
+<script src="../../js/utils/illustration.js"></script>
+<script src="../../js/data/categories.js"></script>
+<script src="../../js/data/authors.js"></script>
+<script src="../../js/data/tags.js"></script>
+<script src="../../js/data/articles.js"></script>
+<script src="../../js/data/explicativos.js"></script>
+<script src="../../js/data/cartuns.js"></script>
+<script src="../../js/data/dados.js"></script>
+<script src="../../js/data/queries.js"></script>
+<script src="../../js/components/chrome.js"></script>
+<script src="../../js/components/card.js"></script>
+<script src="../../js/app.js"></script>
+<script>window.VS_APP.initPage("jogos");</script>
+<script src="../../js/games/sudoku.js"></script>
+</body>
+</html>

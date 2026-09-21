@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caça-palavras — Voz e Sociedade</title>
+<meta name="description" content="Jogo de caça-palavras com termos relacionados aos temas do Voz e Sociedade.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+<script>(function(){try{var t=JSON.parse(localStorage.getItem('vozesociedade:theme'));if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="../../css/variables.css">
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<div id="breaking-bar" class="breaking-bar"></div>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+  <div class="container"><nav class="breadcrumbs" aria-label="Caminho de navegação"><a href="../../index.html">Início</a><span class="sep">/</span><a href="index.html">Jogos</a><span class="sep">/</span><span>Caça-palavras</span></nav></div>
+  <div class="container page-header">
+    <h1>Caça-palavras</h1>
+    <p style="color:var(--ink-soft);margin-top:0.5rem;">Clique na primeira letra e depois na última letra de cada palavra (na horizontal, vertical ou diagonal).</p>
+  </div>
+  <div class="container game-layout">
+    <div class="game-board">
+      <div class="wordsearch-grid" id="ws-grid"></div>
+    </div>
+    <div class="game-sidebar">
+      <p class="meta" id="ws-timer">Tempo: 0s</p>
+      <div class="wordsearch-wordlist" id="ws-wordlist"></div>
+      <button class="btn btn-outline" id="ws-restart" style="margin-top:1.5rem;">Reiniciar jogo</button>
+      <p class="meta" id="ws-status" style="margin-top:1rem;"></p>
+    </div>
+  </div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="../../js/utils/helpers.js"></script>
+<script src="../../js/utils/illustration.js"></script>
+<script src="../../js/data/categories.js"></script>
+<script src="../../js/data/authors.js"></script>
+<script src="../../js/data/tags.js"></script>
+<script src="../../js/data/articles.js"></script>
+<script src="../../js/data/explicativos.js"></script>
+<script src="../../js/data/cartuns.js"></script>
+<script src="../../js/data/dados.js"></script>
+<script src="../../js/data/queries.js"></script>
+<script src="../../js/components/chrome.js"></script>
+<script src="../../js/components/card.js"></script>
+<script src="../../js/app.js"></script>
+<script>window.VS_APP.initPage("jogos");</script>
+<script src="../../js/games/cacapalavras.js"></script>
+</body>
+</html>

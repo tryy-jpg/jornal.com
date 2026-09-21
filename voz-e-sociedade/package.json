@@ -1,0 +1,18 @@
+{
+  "name": "voz-e-sociedade",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Voz e Sociedade — jornal digital de demonstração (site estático em HTML/CSS/JS, sem framework e sem bundler).",
+  "scripts": {
+    "dev": "serve . -l 3000",
+    "build": "node scripts/validate.js",
+    "preview": "serve . -l 4173",
+    "start": "npm run preview"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

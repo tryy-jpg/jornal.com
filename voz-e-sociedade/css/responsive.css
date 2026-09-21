@@ -1,0 +1,51 @@
+@media (min-width: 641px) {
+  .header-date { display: block; }
+}
+
+@media (max-width: 960px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .investig-grid, .card-grid, .card-grid.cols-3, .opinion-grid, .data-grid, .games-grid, .related-grid, .masthead-list, .cartum-grid, .games-hub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .topic-grid { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .mais-lidas-latest-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .category-body { grid-template-columns: 1fr; }
+  .article-layout { grid-template-columns: 1fr; }
+  .hcard { grid-template-columns: 160px 1fr; }
+  .toc-widget { position: static; border-left: none; padding-left: 0; border-top: 2px solid var(--rule); padding-top: var(--sp-4); }
+}
+
+@media (max-width: 640px) {
+  .main-nav-wrap { display: none; }
+  .mobile-menu-btn { display: flex; }
+  .masthead { font-size: 1.15rem; }
+  .header-top { padding-block: var(--sp-4); }
+  .header-actions { gap: var(--sp-2); }
+  .header-actions > a.icon-btn[href*="salvos"] { display: none; }
+  .icon-btn, .mobile-menu-btn { width: 40px; height: 40px; }
+  .icon-btn svg { width: 17px; height: 17px; }
+  .search-panel-close { display: flex; }
+  .search-panel form { flex-wrap: wrap; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .data-grid, .games-grid, .investig-grid, .card-grid, .card-grid.cols-3, .opinion-grid, .related-grid, .masthead-list, .cartum-grid, .games-hub-grid {
+    grid-template-columns: 1fr;
+  }
+  .latest-item { grid-template-columns: 70px 1fr; }
+  .category-list-item { grid-template-columns: 1fr; }
+  .hcard { grid-template-columns: 1fr; }
+  .hcard img { aspect-ratio: 16/9; }
+  .author-header { flex-direction: column; text-align: center; }
+  .footer-bottom { flex-direction: column; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { width: 100%; }
+  .pagination button { width: 42px; height: 42px; }
+  .reading-controls button { width: 40px; height: 40px; }
+  .sources-block dl, .correction-item dl { grid-template-columns: 1fr; gap: 0 0; }
+  .sources-block dt, .correction-item dt { margin-top: var(--sp-3); }
+  .sources-block dt:first-child, .correction-item dt:first-child { margin-top: 0; }
+  .breaking-bar a { min-width: 0; overflow-wrap: break-word; }
+  .article-header h1 { max-width: none; }
+  .search-hero form { flex-wrap: wrap; }
+  .search-filters select { flex: 1 1 auto; min-width: 0; }
+}

@@ -1,0 +1,146 @@
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+h1, h2, h3 { font-family: var(--font-headline); line-height: 1.15; letter-spacing: -0.01em; }
+
+p { color: var(--ink); }
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cat-color, var(--signal));
+}
+
+.meta {
+  font-family: var(--font-ui);
+  font-size: var(--fs-meta);
+  color: var(--ink-faint);
+}
+
+.byline a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.byline a:hover { color: var(--signal); }
+
+a.link-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule-strong);
+}
+a.link-underline:hover { text-decoration-color: var(--signal); color: var(--signal); }
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-5);
+}
+
+.content-col {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.section-title {
+  font-family: var(--font-headline);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  border-bottom: 3px solid var(--cat-color, var(--ink));
+  padding-bottom: var(--sp-3);
+  margin-bottom: var(--sp-5);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+.section-title .ver-tudo {
+  font-family: var(--font-ui);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn {
+  font-family: var(--font-ui);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-5);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { background: var(--signal); border-color: var(--signal); }
+.btn-outline { background: transparent; color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
+.btn-small { padding: var(--sp-2) var(--sp-4); font-size: var(--fs-eyebrow); }
+
+.tag-pill {
+  font-family: var(--font-ui);
+  font-size: var(--fs-eyebrow);
+  color: var(--ink-soft);
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  padding: var(--sp-1) var(--sp-3);
+  white-space: nowrap;
+}
+.tag-pill:hover { border-color: var(--signal); color: var(--signal); }
+
+.demo-flag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--signal);
+  border: 1px solid var(--signal);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  vertical-align: middle;
+}
+
+.rule { border: none; border-top: 1px solid var(--rule); margin: var(--sp-6) 0; }
+
+.empty-state {
+  text-align: center;
+  padding: var(--sp-8) var(--sp-5);
+  color: var(--ink-soft);
+}
+.empty-state h3 { font-family: var(--font-headline); font-size: var(--fs-h2); margin-bottom: var(--sp-3); color: var(--ink); }
+.empty-state p { max-width: 40ch; margin-inline: auto; margin-bottom: var(--sp-5); }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--paper-soft) 25%, var(--rule) 37%, var(--paper-soft) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  border-radius: var(--radius);
+}
+@keyframes skeleton-loading { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation: none; } }
+
+.content-warning {
+  background: var(--paper-soft);
+  border-left: 3px solid var(--signal);
+  padding: var(--sp-4) var(--sp-5);
+  font-family: var(--font-ui);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  margin-bottom: var(--sp-6);
+}
+.content-warning strong { color: var(--ink); display: block; margin-bottom: var(--sp-1); }
+
+.opinion-disclaimer, .editorial-disclaimer {
+  font-family: var(--font-ui);
+  font-size: var(--fs-small);
+  color: var(--ink-faint);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-4);
+  margin-top: var(--sp-6);
+  font-style: italic;
+}

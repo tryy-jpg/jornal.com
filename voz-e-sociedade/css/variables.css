@@ -1,0 +1,159 @@
+/* ==========================================================================
+   VOZ E SOCIEDADE — Design Tokens
+   Sistema de cores por categoria editorial + tipografia + espaçamento
+   ========================================================================== */
+
+:root {
+  /* ---- Base neutra (light) ---- */
+  --paper: #fcfcfb;
+  --paper-soft: #f2f1ec;
+  --ink: #16161a;
+  --ink-deep: #0e0e11;
+  --ink-soft: #4a4a46;
+  --ink-faint: #78766f;
+  --rule: #dedcd4;
+  --rule-strong: #b9b7ad;
+  --surface-raised: #ffffff;
+
+  /* ---- Faixa editorial escura (usada com moderação, nunca preto puro) ---- */
+  --strip-dark-a: #1c1e24;
+  --strip-dark-b: #26242a;
+  --strip-ink: #ece9e1;
+
+  /* ---- Acento editorial (uso moderado: links, ativos, breaking) ---- */
+  --signal: #9a2b23;
+  --signal-ink: #ffffff;
+  --signal-soft: #f4e4e1;
+
+  /* ---- Cores por categoria (identificação editorial) ---- */
+  --cat-feminicidio: #7a1f2b;
+  --cat-misoginia: #4b3b6b;
+  --cat-racismo: #8c5a2b;
+  --cat-sociedade: #2b4c6b;
+  --cat-politica: #4f5d3a;
+  --cat-cultura: #6b4423;
+  --cat-dados: #29506b;
+  --cat-opiniao: #5a5648;
+  --cat-editorial: #16161a;
+  --cat-entrevista: #3a5a4a;
+  --cat-analise: #3d4f6b;
+  --cat-cartum: #6b3a4f;
+
+  /* ---- Tipografia ---- */
+  --font-headline: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --tracking-label: 0.06em;
+  --tracking-tight: -0.02em;
+
+  /* ---- Escala tipográfica (fluida entre 320px e ~960px, fixa acima disso) ---- */
+  --fs-eyebrow: 0.72rem;
+  --fs-meta: 0.8rem;
+  --fs-small: 0.875rem;
+  --fs-body: 1.0625rem;
+  --fs-lede: clamp(1.1rem, 1rem + 0.6vw, 1.25rem);
+  --fs-h3: clamp(1.2rem, 1.05rem + 0.9vw, 1.35rem);
+  --fs-h2: clamp(1.5rem, 1.25rem + 1.4vw, 1.85rem);
+  --fs-h1: clamp(1.9rem, 1.5rem + 2vw, 2.5rem);
+  --fs-display: clamp(2.1rem, 1.6rem + 3vw, 2.85rem);
+
+  /* ---- Espaçamento ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1240px;
+  --content-max: 700px;
+  --radius: 2px;
+  --shadow-card: 0 1px 3px rgba(23, 23, 28, 0.08);
+  --transition-fast: 0.15s ease;
+
+  /* ---- Área segura (notch / home indicator) ---- */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* ---- Breakpoints (referência para JS) ---- */
+  --bp-mobile: 640px;
+  --bp-tablet: 960px;
+
+  color-scheme: light;
+}
+
+/* ---- Dark mode ---- */
+:root[data-theme="dark"] {
+  --paper: #131316;
+  --paper-soft: #1c1c20;
+  --ink: #ece9e1;
+  --ink-deep: #f5f3ec;
+  --ink-soft: #b9b7ae;
+  --ink-faint: #85837b;
+  --rule: #313033;
+  --rule-strong: #46454a;
+  --surface-raised: #1a1a1e;
+
+  --strip-dark-a: #0c0c0e;
+  --strip-dark-b: #17161a;
+  --strip-ink: #ece9e1;
+
+  --signal: #e2685c;
+  --signal-ink: #17171c;
+  --signal-soft: #33201e;
+
+  --cat-feminicidio: #d97b7f;
+  --cat-misoginia: #a99bd6;
+  --cat-racismo: #d4a06a;
+  --cat-sociedade: #86aed4;
+  --cat-politica: #a3b78a;
+  --cat-cultura: #c99a6c;
+  --cat-dados: #7fb3d4;
+  --cat-opiniao: #c9c6b8;
+  --cat-editorial: #eeece6;
+  --cat-entrevista: #8fc3ab;
+  --cat-analise: #9fb3d6;
+  --cat-cartum: #cf9bb3;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #131316;
+    --paper-soft: #1c1c20;
+    --ink: #ece9e1;
+    --ink-deep: #f5f3ec;
+    --ink-soft: #b9b7ae;
+    --ink-faint: #85837b;
+    --rule: #313033;
+    --rule-strong: #46454a;
+    --surface-raised: #1a1a1e;
+
+    --strip-dark-a: #0c0c0e;
+    --strip-dark-b: #17161a;
+    --strip-ink: #ece9e1;
+
+    --signal: #e2685c;
+    --signal-ink: #17171c;
+    --signal-soft: #33201e;
+
+    --cat-feminicidio: #d97b7f;
+    --cat-misoginia: #a99bd6;
+    --cat-racismo: #d4a06a;
+    --cat-sociedade: #86aed4;
+    --cat-politica: #a3b78a;
+    --cat-cultura: #c99a6c;
+    --cat-dados: #7fb3d4;
+    --cat-opiniao: #c9c6b8;
+    --cat-editorial: #eeece6;
+    --cat-entrevista: #8fc3ab;
+    --cat-analise: #9fb3d6;
+    --cat-cartum: #cf9bb3;
+
+    color-scheme: dark;
+  }
+}

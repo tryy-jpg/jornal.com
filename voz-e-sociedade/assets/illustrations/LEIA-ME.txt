@@ -1,0 +1,2 @@
+Pasta reservada para arquivos reais quando o conteúdo de demonstração for substituído por imagens próprias e devidamente licenciadas.
+Nesta demonstração, as imagens usadas no site são geradas dinamicamente como ilustrações SVG (ver js/utils/illustration.js), portanto esta pasta permanece vazia por padrão.
